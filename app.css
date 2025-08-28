@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme : dark;
+  }
+  background-color : black;
+}
+
+:root {
+  --primary-text-color : #b29162;
+  --primary-background :#b29162;
+}
+
+
+.text-color {
+  color : var(--primary-text-color)
+}
+.background-color {
+  background : var(--primary-background);
+}
+
+.view{
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://assets.nicepagecdn.com/d2cc3eaa/6401142/images/client-doing-hair-cut-2-min.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    min-height: 876px;
+    width: 100%;
+    height: 50px;
+
+}
+/* Fade-in animation class */
+.header {
+  animation: anim 2s ease-in-out infinite;
+  opacity: 0;
+  scale : 0.5;  transform-origin: bottom;
+  will-change : transform, opacity;
+  animation-duration: 1.5s;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes anim {
+  0% {
+    transform : translateX(300px) rotateX(0deg);
+    opacity: 0;
+    rotate : 0deg;
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    scale : 0.9;
+    opacity: 1;
+  }
+}
+.para {
+  animation: anim 2s ease-in-out infinite;
+  opacity: 0;
+  scale : 0.5;  transform-origin: bottom;
+  will-change : transform, opacity;
+  animation-duration: 1.5s;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes anim {
+  0% {
+    transform : translateX(300px) rotateX(0deg);
+    opacity: 0;
+    rotate : 0deg;
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    scale : 0.9;
+    opacity: 1;
+  }
+}
+
+
+u-text {
+  word-wrap : break-word;
+  position: relative;
+}
+
+.u-text-1 {
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+    --animation-custom_in-translate_x: 300px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  font-size: 5.625rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 197px 0 0 525px;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
